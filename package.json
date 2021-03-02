@@ -1,0 +1,9 @@
+{
+  "name": "actions",
+  "version": "1.0.0",
+  "description": "Basic node app to demonstrate GitHub Actions in action!",
+  "main": "index.js",
+  "repository": "git@github.com:benderillo/actions.git",
+  "author": "Alex V <alex@dream-coding.com>",
+  "license": "MIT"
+}
