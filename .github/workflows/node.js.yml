@@ -20,12 +20,9 @@ jobs:
         node-version: 14.x
     - run: yarn install --frozen-lockfile
     - run: yarn test
-  notify:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
+
     - name: Send mail
-      if: failure()
+      if: ${{ failure() }}
       uses: dawidd6/action-send-mail@v2
       with:
         # mail server settings
