@@ -6,7 +6,7 @@ describe('Factorial function', () => {
     [1, 1],
     [3, 6],
     [10, 3628800],
-  ])('should correctly compute factorial of a positive non-zero number', (input, expectedValue) => {
+  ])('should correctly compute factorial of a non-negative number', (input, expectedValue) => {
     expect(factorial(input)).toEqual(expectedValue);
   });
 
