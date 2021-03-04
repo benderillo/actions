@@ -33,11 +33,17 @@ jobs:
         username: ${{ secrets.EMAIL_USERNAME }}
         password: ${{ secrets.EMAIL_PASSWORD }}
         # email subject
-        subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
-        # email body as text
+        subject: The "${{ github.job }}" job in ${{ github.repository }} repository has failed
+        content_type: text/html
         body: |
-          ${{ github.job }} job in workflow ${{ github.workflow }} of ${{ github.repository }} has failed.
-          $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
+          <html>
+            <body>
+              <h2>${{ github.job }} job in workflow ${{ github.workflow }} of ${{ github.repository }} has failed.</h2>
+              <a href="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}">First Link</a>
+              <a href="${{ job.url }}">Second Link</a>
+              
+            </body>
+          </html>
         # comma-separated string, send email to
         to: alex@dream-coding.com
         # from email name
