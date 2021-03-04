@@ -39,9 +39,7 @@ jobs:
           <html>
             <body>
               <h2>${{ github.job }} job in workflow ${{ github.workflow }} of ${{ github.repository }} has failed.</h2>
-              <a href="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}">First Link</a>
-              <a href="${{ job.url }}">Second Link</a>
-              
+              <a href="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" target="_blank" style="background-color: #28a745 !important; box-sizing: border-box; color: #fff; text-decoration: none; position: relative; display: inline-block; font-size: inherit; font-weight: 500; line-height: 1.5; white-space: nowrap; vertical-align: middle; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; border-radius: .5em; -webkit-appearance: none; -moz-appearance: none; appearance: none; box-shadow: 0 1px 0 rgba(27,31,35,.1),inset 0 1px 0 hsla(0,0%,100%,.03); transition: background-color .2s cubic-bezier(.3,0,.5,1); font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji !important; padding: .75em 1.5em; border: 1px solid #28a745;">View workflow run</a>
             </body>
           </html>
         # comma-separated string, send email to
