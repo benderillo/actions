@@ -4,7 +4,7 @@
  */
 export function factorial(n) {
   if (n < 0) {
-    throw new Error('Non-negative integers not supported');
+    throw new Error('Factorial as such is only defined for non-negative integers!');
   }
 
   if (n === 0) {
